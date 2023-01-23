@@ -9,6 +9,10 @@ const etc2 = new URL('/src/assets/images/semana_etc (2).jpg', import.meta.url).h
 const vitec1 = new URL('/src/assets/images/vitrines_tec (1).jpg', import.meta.url).href
 const vitec2 = new URL('/src/assets/images/vitrines_tec (2).jpg', import.meta.url).href
 
+//static download handling
+const etc = new URL('/src/assets/downloads/Certificado Exposição de Jogos.pdf', import.meta.url).href
+const vitec = new URL('/src/assets/downloads/certificado-artigo-821610-9maoY.pdf', import.meta.url).href
+
 export default function Home() {
 
   function getAge(birthday) {
@@ -115,7 +119,7 @@ export default function Home() {
           <h5>Semana de Educação, Tecnologia, Ciência e Cultura</h5>
           <div className="d-flex flex-row align-items-center" style={{marginLeft: "12px"}}>
             <HiBadgeCheck />
-            <a href="./src/assets/downloads/Certificado Exposição de Jogos.pdf" download={true}>Certificado</a>
+            <a href={etc} download={true}>Certificado</a>
           </div>
         </div>
         <p>
@@ -132,7 +136,7 @@ export default function Home() {
           <h5 className="mt-4">#Mostra IFRJ</h5>
           <div className="d-flex flex-row align-items-center" style={{marginLeft: "12px"}}>
             <HiBadgeCheck />
-            <a href="./src/assets/downloads/certificado-artigo-821610-9maoY.pdf" download={true}>Certificado</a>
+            <a href={vitec} download={true}>Certificado</a>
           </div>
         </div>
         
