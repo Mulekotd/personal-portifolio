@@ -4,14 +4,18 @@ import './Cards.css'
 
 export default function Cards(props) {
 
+    const image = {
+      height: "100%",
+      width: "100%"
+    }
+
     return (
       <div
-      className="d-flex flex-column"
-      style={{alignItems: "center", width: "480px", height: "auto", border: "1px solid black", borderRadius: "6px", boxShadow: "rgba(0, 0, 0, 0.4) 0px 30px 90px"}}
+      className="box d-flex flex-column"
       >
-        <div className="transparent-card" style={{height: "260px", width: "100%"}}>
+        <div className="transparent-card">
           <Image
-          style={{height: "100%", width: "100%"}}
+          style={image}
           alt={props.alt} 
           src={props.src}
           />

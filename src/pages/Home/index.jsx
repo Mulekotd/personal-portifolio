@@ -38,6 +38,58 @@ export default function Home() {
     }
   }
 
+  const profile = {
+    width: "350px",
+    height: "300px",
+    borderRadius: "36px"
+  }
+
+  const title = {
+    fontWeight: "bold",
+    fontSize: "24px",
+    textTransform: "uppercase"
+  }
+
+  const aboutContainer = {
+    border: "none"
+  }
+
+  const aboutContent = {
+    marginLeft: "24px",
+    width: "100%",
+    border: "none"
+  }
+
+  const skillsContainer = {
+    width: "100%",
+    height: "auto", border: "none"
+  }
+
+  const skillsContent = {
+    height: "100%",
+    width: "50%",
+    boxShadow: "rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px"
+  }
+  
+  const image = {
+    height: "100%"
+  }
+
+  const devContainer = {
+    height: "auto",
+    boxShadow: "rgba(0, 0, 0, 0.15) 0px 3px 3px 0px"
+  }
+
+  const devContent = {
+    height: "360px",
+    display: "flex",
+    justifyContent: "space-around"
+  }
+
+  const badge = {
+    marginLeft: "12px"
+  }
+
   return (
     <main
     className="d-flex flex-column mt-4"
@@ -45,24 +97,24 @@ export default function Home() {
     >
       <Card
       className="container bd-highlight d-flex flex-row p-4"
-      style={{border: "none"}}
+      style={aboutContainer}
       >
         <Image
         alt={"perfil"}
         src={perfil}
-        style={{width: "350px", height: "300px", borderRadius: "36px"}}
+        style={profile}
         />
         <Card
         className="d-flex flex-collumn p-4"
-        style={{marginLeft: "24px", width: "100%", border: "none"}}
+        style={aboutContent}
         >
-          <p style={{fontWeight: "bold", fontSize: "24px", textTransform: "uppercase"}}>Sobre Mim</p>
+          <p style={title}>Sobre Mim</p>
           <p>
             {greetingMessage()}, eu me chamo João Pedro Silverio Gama tenho {getAge()} anos e possuo experiência
             em Desenvolvimento Web Full-Stack.
           </p>
 
-          <p style={{fontWeight: "bold", fontSize: "24px", textTransform: "uppercase"}}>Resumo</p>
+          <p style={title}>Resumo</p>
           <p>
             Natural de São Gonçalo sempre fui interessado na área de TI. Para alcança os meus objetivos, em
             2020 ingressei no Instituto Federal do Rio de Janeiro - Campus Niterói, onde finalizei o curso
@@ -73,11 +125,11 @@ export default function Home() {
 
       <Card
       className="container d-flex flex-row"
-      style={{width: "100%", height: "auto", border: "none"}}
+      style={skillsContainer}
       >
         <Card
         className="container d-flex flex-column align-items-center p-3 m-4"
-        style={{height: "100%", width: "50%", boxShadow: "rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px"}}
+        style={skillsContent}
         >
           <h3>Soft Skills</h3>
 
@@ -92,7 +144,7 @@ export default function Home() {
         </Card>
         <Card
         className="container d-flex flex-column align-items-center p-3 m-4"
-        style={{height: "100%", width: "50%", boxShadow: "rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px"}}
+        style={skillsContent}
         >
           <h3>Hard Skills</h3>
 
@@ -110,14 +162,14 @@ export default function Home() {
       </Card>
 
       <Card
-      style={{height: "auto", boxShadow: "rgba(0, 0, 0, 0.15) 0px 3px 3px 0px"}}
+      style={devContainer}
       className="container p-4 mt-4 mb-4"
       >
-        <p style={{fontWeight: "bold", fontSize: "24px", textTransform: "uppercase"}}>Desenvolvimento</p>
+        <p style={title}>Desenvolvimento</p>
 
         <div className="d-flex flex-row align-items-baseline">
           <h5>Semana de Educação, Tecnologia, Ciência e Cultura</h5>
-          <div className="d-flex flex-row align-items-center" style={{marginLeft: "12px"}}>
+          <div className="d-flex flex-row align-items-center" style={badge}>
             <HiBadgeCheck />
             <a href={etc} download={true}>Certificado</a>
           </div>
@@ -127,14 +179,14 @@ export default function Home() {
           onde desempenhei o papel de palestrante e monitor de uma sala temática, aberta ao público externo, de jogos desenvolvidos
           no âmbito da instituição.
         </p>
-        <div className="container" style={{height: "360px", display: "flex", justifyContent: "space-around"}}>
-          <img style={{height: "100%"}} alt="etc1" src={etc1} />
-          <img style={{height: "100%"}} alt="etc2" src={etc2} />
+        <div className="container" style={devContent}>
+          <img style={image} alt="etc1" src={etc1} />
+          <img style={image} alt="etc2" src={etc2} />
         </div>
 
         <div className="d-flex flex-row align-items-baseline">
           <h5 className="mt-4">#Mostra IFRJ</h5>
-          <div className="d-flex flex-row align-items-center" style={{marginLeft: "12px"}}>
+          <div className="d-flex flex-row align-items-center" style={badge}>
             <HiBadgeCheck />
             <a href={vitec} download={true}>Certificado</a>
           </div>
@@ -146,9 +198,9 @@ export default function Home() {
           produtos e serviços panteados resultantes de projetos de pesquisa e inovação. Essa Vitrine visa promover
           a visibilidade perante o público interno e externo da instituição, bem como obter parcerias e financiamentos.
         </p>
-        <div className="container" style={{height: "360px", display: "flex", justifyContent: "space-around"}}>
-          <img style={{height: "100%"}} alt="vitec1" src={vitec1} />
-          <img style={{height: "100%"}} alt="vitec2" src={vitec2} />
+        <div className="container" style={devContent}>
+          <img style={image} alt="vitec1" src={vitec1} />
+          <img style={image} alt="vitec2" src={vitec2} />
         </div>
       </Card>
     </main>       
