@@ -48,7 +48,7 @@ export default function Projects() {
           alt={"Calculadora"}
           src={calculadora}
           className="col"
-          href={"https://github.com/Mulekotd/react-simple-calculator"}
+          href={"https://mulekotd.github.io/simple-react-calculator/"}
           title={"React Simple Calculator"}
           />
         </Card>
