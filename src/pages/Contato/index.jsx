@@ -7,7 +7,8 @@ import { AiFillInstagram } from 'react-icons/ai'
 export default function Contact() {
 
   const card = {
-    height: "auto"
+    height: "auto",
+    boxShadow: "rgba(0, 0, 0, 0.1) 0px 4px 12px"
   }
 
   const container = {
